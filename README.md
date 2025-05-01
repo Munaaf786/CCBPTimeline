@@ -1,6 +1,6 @@
-In this project, let's build a **CCBP Timeline** by applying the concepts we have learned till now.
+In this project, I have built a **CCBP Timeline App** by applying the concepts I have learned till now.
 
-### Refer to the image below:
+### Refer to the image below for Output:
 
 <br/>
 <div style="text-align: center;">
@@ -25,57 +25,25 @@ In this project, let's build a **CCBP Timeline** by applying the concepts we hav
 
 - Download dependencies by running `npm install`
 - Start up the app using `npm start`
+
 </details>
 
-### Completion Instructions
+### Completed Following Instructions
 
 <details>
-<summary>Functionality to be added</summary>
+<summary>Functionality added</summary>
 <br/>
 
-The app must have the following functionalities
+The app has the following functionalities
 
-- Initially, the page should display the timeline items list using **Chrono custom rendering** based on the `categoryId`
-- The `TimelineView` component is provided with `timelineItemsList`. It consists of a list of timeline item objects with the following properties in each timeline item object
-
-  - The `timelineItemObject` with `categoryId` as `COURSE` will have the following properties
-
-    |     Key     | Data Type |
-    | :---------: | :-------: |
-    |     id      |  String   |
-    | categoryId  |  String   |
-    |    title    |  String   |
-    | courseTitle |  String   |
-    | description |  String   |
-    |  duration   |  String   |
-    |  tagsList   |   Array   |
-
-  - The `tagsListObject` will have the following properties
-
-    | Key  | Data Type |
-    | :--: | :-------: |
-    |  id  |  String   |
-    | name |  String   |
-
-  - The `timelineItemObject` with `categoryId` as `PROJECT` will have the following properties
-
-    |     Key      | Data Type |
-    | :----------: | :-------: |
-    |      id      |  String   |
-    |  categoryId  |  String   |
-    |    title     |  String   |
-    | projectTitle |  String   |
-    | description  |  String   |
-    |   imageUrl   |  String   |
-    |   duration   |  String   |
-    |  projectUrl  |  String   |
-
-- If the value of the key `categoryId` in `timelineItemObject` is `PROJECT` then Project card should be rendered
-  - The `ProjectTimelineCard` should consist of **Visit** link when a user clicks on it, then the page should be navigated to the respective project
-  - The `ProjectTimelineCard` should consist of a **Calendar** icon with respective `duration` text
-- If the value of the key `categoryId` in `timelineItemObject` is `COURSE` then the Course card should be rendered
-  - The `CourseTimelineCard` should consist of a **Clock** icon with respective `duration` text
-- Give the timeline items list data as a value to `items` prop for the `Chrono` component from **react-chrono**, so that the title will be displayed beside each card
+- Timeline items are displayed using **react-chrono** with custom rendering based on the `categoryId`.
+- If the `categoryId` is `COURSE`, a **CourseTimelineCard** is rendered with:
+  - A clock icon (`AiFillClockCircle`) for the duration.
+  - Course title, description, and tags.
+- If the `categoryId` is `PROJECT`, a **ProjectTimelineCard** is rendered with:
+  - A calendar icon (`AiFillCalendar`) for the duration.
+  - Project title, description, and an image.
+  - A **Visit** link that navigates to the respective project URL when clicked.
 
 </details>
 
@@ -94,7 +62,7 @@ The app must have the following functionalities
 <summary>Implementation Files</summary>
 <br/>
 
-Use these files to complete the implementation:
+Used these files to complete the implementation:
 
 - `src/components/TimelineView/index.js`
 - `src/components/TimelineView/index.css`
@@ -102,6 +70,7 @@ Use these files to complete the implementation:
 - `src/components/CourseTimelineCard/index.css`
 - `src/components/ProjectTimelineCard/index.js`
 - `src/components/ProjectTimelineCard/index.css`
+
 </details>
 
 ### Important Note
@@ -111,15 +80,17 @@ Use these files to complete the implementation:
 
 <br/>
 
-- To build this project, take a look at the <a href='https://learning.ccbp.in/frontend-development/course?c_id=2f4192f7-7495-49ca-a6ce-6b74005e25f1&s_id=a152928a-64cc-4697-936c-db2e3c4f2716&t_id=416f0cab-8425-413b-9157-c7b4d4ae4467' target="_blank">React Chrono</a> reading material
-
-**The following instructions are required for the tests to pass**
-
-- `AiFillClockCircle`, `AiFillCalendar` icons from `react-icons` should be used for **clock** and **calender** icons in card respectively
+- Used `react-chrono` to render timeline with the `items` prop.
+- Rendered `CourseTimelineCard` when `categoryId` is `COURSE`.
+- Rendered `ProjectTimelineCard` when `categoryId` is `PROJECT`.
+- Used icons:
+  - `AiFillClockCircle` for course duration.
+  - `AiFillCalendar` for project duration.
+- The timeline title is displayed beside each card using the `items` prop in the `Chrono` component.
 
 </details>
 
-### Resources
+### Resources Used
 
 <details>
 <summary>Colors</summary>
@@ -141,9 +112,11 @@ Use these files to complete the implementation:
 
 </details>
 
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+### Conclusion
+
+- 📚 This project showcases how to effectively use **react-chrono** to display course and project timelines with custom card components, responsive layout, and icons.
+- Thanks for checking out my CCBP Timeline App! It demonstrates skills in component-based architecture, dynamic rendering, and conditional logic in React.
+
+- 🔗 Check it out here: [https://ccbpTimeline.ccbp.tech]
+
+Happy coding! 🚀
